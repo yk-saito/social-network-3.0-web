@@ -1,0 +1,195 @@
+/* ヘッダー
+====================================*/
+.headerContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerButton {
+  margin-right: 16px;
+}
+
+.headerButton button {
+  background-color: #4B0082;
+  border: 0;
+  border-radius: 5px;
+  color: #fafafa;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 16px;
+  padding: 10px;
+}
+
+.headerButton button:hover {
+  background-color:#E6E6FA;
+  color: black;
+}
+
+/* メイン
+====================================*/
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  width: 100%;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 700px;
+}
+
+.mainHeader {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bio {
+  color: gray;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* --- 投稿ボタン --- */
+.postFooter{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.postButton {
+  background: #bbbcde;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+}
+
+.postButton:hover {
+  background:#E6E6FA;
+}
+
+/* --- ソートボタン --- */
+.sortButton {
+  margin: 0 0 16px;
+}
+
+.sortButton button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: .4em 2em .4em 1.2em;
+  position: relative;
+  text-align: center;
+  transition: .3s ease;
+}
+
+.sortButton button::after {
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  content: '';
+  display: block;
+  height: 8px;
+  position: absolute;
+  right: 8px;
+  top: calc(50% - 5px);
+  transform: rotate(135deg);
+  transition: .3s ease;
+  width: 8px;
+}
+
+.sortButton button:focus::after {
+  border-color: #666666;
+}
+
+.sortButton button:focus.asc::after {
+  top: calc(50% - 3px);
+  transform: rotate(315deg);
+}
+
+.sortButton button:focus.desc::after {
+  top: calc(50% - 5px);
+  transform: rotate(135deg);
+}
+
+/* 投稿一覧
+====================================*/
+.postList {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.postList span {
+  color: gray;
+  margin-right: 15px;
+}
+
+.postList li {
+  border-bottom: 1px solid #eee;
+  list-style: none;
+  padding: 1em;
+}
+
+.postList p {
+  display: inline-block;
+}
+
+.listMessage {
+  white-space: pre-wrap;
+}
+
+/* いいね機能
+====================================*/
+.likeContainer{
+  display: flex;
+}
+/* --- いいねボタン --- */
+.likeButton {
+  background-color: #4B0082;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+}
+
+.likeButton:hover {
+  background-color:#E6E6FA;
+  color: black;
+}
+
+/* --- いいねの数 --- */
+.likeCounter {
+  background-color: #fafafa;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  height: 23px;
+  line-height: 23px;
+  margin-top: 20px;
+  margin-left: 8px;
+  padding: 0px 8px;
+}
+
+.likeCounter:before {
+  background-color: #fafafa;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 10px;
+  content: ' ';
+  float: left;
+  height: 6px;
+  margin-left: -12px;
+  margin-top: 9px;
+  transform: rotate(45deg);
+  width: 6px;
+  -webkit-transform: rotate(45deg);
+}
